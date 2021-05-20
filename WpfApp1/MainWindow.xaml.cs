@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace WpfApp1
+namespace PassGen
 {
     /// <summary>
     /// Логика взаимодействия для MainWindow.xaml
@@ -23,6 +23,12 @@ namespace WpfApp1
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Passgen passgen1 = new Passgen(true,true,true,false);
+            Console.WriteLine(passgen1.Generate(16));
         }
     }
 }
